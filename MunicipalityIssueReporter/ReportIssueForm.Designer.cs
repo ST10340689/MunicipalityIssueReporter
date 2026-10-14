@@ -1,4 +1,4 @@
-﻿namespace MunicipalityIssueReporter
+namespace MunicipalityIssueReporter
 {
     partial class ReportIssueForm
     {
@@ -42,11 +42,12 @@
             progressBarReport = new ProgressBar();
             btnSubmit = new Button();
             button1 = new Button();
+            btnViewReports = new Button();
             SuspendLayout();
             // 
             // lblTitle
             // 
-            lblTitle.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblTitle.Anchor = AnchorStyles.Top;
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblTitle.Location = new Point(487, 12);
@@ -58,7 +59,7 @@
             // 
             // lblLocation
             // 
-            lblLocation.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblLocation.Anchor = AnchorStyles.Top | AnchorStyles.Left;
             lblLocation.AutoSize = true;
             lblLocation.Location = new Point(31, 83);
             lblLocation.Name = "lblLocation";
@@ -69,7 +70,7 @@
             // 
             // txtLocation
             // 
-            txtLocation.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            txtLocation.Anchor = AnchorStyles.Top | AnchorStyles.Left;
             txtLocation.Location = new Point(93, 80);
             txtLocation.Name = "txtLocation";
             txtLocation.Size = new Size(266, 23);
@@ -78,7 +79,7 @@
             // 
             // lblCategory
             // 
-            lblCategory.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblCategory.Anchor = AnchorStyles.Top | AnchorStyles.Left;
             lblCategory.AutoSize = true;
             lblCategory.Location = new Point(31, 149);
             lblCategory.Name = "lblCategory";
@@ -89,7 +90,7 @@
             // 
             // cmbCategory
             // 
-            cmbCategory.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            cmbCategory.Anchor = AnchorStyles.Top | AnchorStyles.Left;
             cmbCategory.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbCategory.FormattingEnabled = true;
             cmbCategory.Items.AddRange(new object[] { "Sanitation", "Roads", "Electricity", "Water", "Waste Management", "Public Safety", "Other" });
@@ -101,7 +102,7 @@
             // 
             // lblDescription
             // 
-            lblDescription.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblDescription.Anchor = AnchorStyles.Top | AnchorStyles.Left;
             lblDescription.AutoSize = true;
             lblDescription.Location = new Point(31, 202);
             lblDescription.Name = "lblDescription";
@@ -112,7 +113,7 @@
             // 
             // rtbDescription
             // 
-            rtbDescription.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            rtbDescription.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             rtbDescription.DetectUrls = false;
             rtbDescription.Location = new Point(107, 202);
             rtbDescription.Name = "rtbDescription";
@@ -123,7 +124,7 @@
             // 
             // lblAttachment
             // 
-            lblAttachment.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblAttachment.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             lblAttachment.AutoSize = true;
             lblAttachment.Location = new Point(31, 344);
             lblAttachment.Name = "lblAttachment";
@@ -134,7 +135,7 @@
             // 
             // btnAttach
             // 
-            btnAttach.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnAttach.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnAttach.Font = new Font("Segoe UI", 9.75F);
             btnAttach.Location = new Point(107, 340);
             btnAttach.Name = "btnAttach";
@@ -146,7 +147,7 @@
             // 
             // lblSelectedFile
             // 
-            lblSelectedFile.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblSelectedFile.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             lblSelectedFile.Location = new Point(31, 380);
             lblSelectedFile.Name = "lblSelectedFile";
             lblSelectedFile.Size = new Size(500, 30);
@@ -156,7 +157,7 @@
             // 
             // lblProgress
             // 
-            lblProgress.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            lblProgress.Anchor = AnchorStyles.Bottom;
             lblProgress.ImageAlign = ContentAlignment.MiddleLeft;
             lblProgress.Location = new Point(809, 562);
             lblProgress.Name = "lblProgress";
@@ -167,7 +168,7 @@
             // 
             // progressBarReport
             // 
-            progressBarReport.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            progressBarReport.Anchor = AnchorStyles.Bottom;
             progressBarReport.Location = new Point(393, 560);
             progressBarReport.Name = "progressBarReport";
             progressBarReport.Size = new Size(388, 25);
@@ -176,7 +177,7 @@
             // 
             // btnSubmit
             // 
-            btnSubmit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnSubmit.Anchor = AnchorStyles.Bottom;
             btnSubmit.Font = new Font("Segoe UI", 9.75F);
             btnSubmit.Location = new Point(487, 499);
             btnSubmit.Name = "btnSubmit";
@@ -188,7 +189,7 @@
             // 
             // button1
             // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button1.Anchor = AnchorStyles.Top | AnchorStyles.Left;
             button1.Font = new Font("Segoe UI", 9.75F);
             button1.Location = new Point(12, 12);
             button1.Name = "button1";
@@ -198,11 +199,24 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // btnViewReports
+            // 
+            btnViewReports.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+            btnViewReports.Font = new Font("Segoe UI", 9.75F);
+            btnViewReports.Location = new Point(152, 12);
+            btnViewReports.Name = "btnViewReports";
+            btnViewReports.Size = new Size(170, 24);
+            btnViewReports.TabIndex = 14;
+            btnViewReports.Text = "View Submitted Reports";
+            btnViewReports.UseVisualStyleBackColor = true;
+            btnViewReports.Click += btnViewReports_Click;
+            // 
             // ReportIssueForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1122, 611);
+            Controls.Add(btnViewReports);
             Controls.Add(button1);
             Controls.Add(btnSubmit);
             Controls.Add(progressBarReport);
@@ -217,11 +231,10 @@
             Controls.Add(txtLocation);
             Controls.Add(lblLocation);
             Controls.Add(lblTitle);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            MinimumSize = new Size(700, 550);
+            MinimumSize = new Size(850, 560);
             Name = "ReportIssueForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "ReportIssueForm";
+            Text = "Report an Issue";
             Load += ReportIssueForm_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -243,5 +256,6 @@
         private ProgressBar progressBarReport;
         private Button btnSubmit;
         private Button button1;
+        private Button btnViewReports;
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace MunicipalityIssueReporter
+namespace MunicipalityIssueReporter
 {
     partial class MainMenuForm
     {
@@ -36,6 +36,7 @@
             // 
             // lblTitle
             // 
+            lblTitle.Anchor = AnchorStyles.Top;
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitle.Location = new Point(155, 9);
@@ -47,6 +48,7 @@
             // 
             // btnReportIssues
             // 
+            btnReportIssues.Anchor = AnchorStyles.Top;
             btnReportIssues.Location = new Point(169, 106);
             btnReportIssues.Name = "btnReportIssues";
             btnReportIssues.Size = new Size(443, 39);
@@ -57,16 +59,18 @@
             // 
             // btnEvents
             // 
-            btnEvents.Enabled = false;
+            btnEvents.Anchor = AnchorStyles.Top;
             btnEvents.Location = new Point(169, 211);
             btnEvents.Name = "btnEvents";
             btnEvents.Size = new Size(443, 39);
             btnEvents.TabIndex = 4;
             btnEvents.Text = "Local Events and Announcements";
             btnEvents.UseVisualStyleBackColor = true;
+            btnEvents.Click += btnEvents_Click;
             // 
             // btnServiceStatus
             // 
+            btnServiceStatus.Anchor = AnchorStyles.Top;
             btnServiceStatus.Enabled = false;
             btnServiceStatus.Location = new Point(169, 307);
             btnServiceStatus.Name = "btnServiceStatus";
@@ -84,8 +88,10 @@
             Controls.Add(btnEvents);
             Controls.Add(btnReportIssues);
             Controls.Add(lblTitle);
+            MinimumSize = new Size(760, 440);
             Name = "MainMenuForm";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Municipality Service Portal";
             ResumeLayout(false);
             PerformLayout();
         }

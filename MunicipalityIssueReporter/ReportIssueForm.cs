@@ -1,4 +1,4 @@
-﻿using MunicipalityIssueReporter.Models;
+using MunicipalityIssueReporter.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,7 +6,6 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 using System.IO;
 using MunicipalityIssueReporter.Services;
 
@@ -49,11 +48,14 @@ namespace MunicipalityIssueReporter
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MainMenuForm mainmenu = new MainMenuForm();
-
-            mainmenu.Show();
-
+            // The main menu re-shows itself when this form closes.
             this.Close();
+        }
+
+        private void btnViewReports_Click(object sender, EventArgs e)
+        {
+            using SubmittedReportsForm reportsForm = new SubmittedReportsForm();
+            reportsForm.ShowDialog(this);
         }
 
         private void btnAttach_Click(object sender, EventArgs e)
@@ -114,7 +116,7 @@ namespace MunicipalityIssueReporter
             IssueReport report = new IssueReport
             {
                 Location = txtLocation.Text.Trim(),
-                Category = cmbCategory.SelectedItem.ToString()!,
+                Category = cmbCategory.Text,
                 Description = rtbDescription.Text.Trim(),
                 AttachmentPath = selectedFilePath,
                 DateReported = DateTime.Now

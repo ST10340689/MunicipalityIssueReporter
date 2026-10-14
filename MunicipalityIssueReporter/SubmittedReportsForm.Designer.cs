@@ -1,4 +1,4 @@
-﻿namespace MunicipalityIssueReporter
+namespace MunicipalityIssueReporter
 {
     partial class SubmittedReportsForm
     {
@@ -36,6 +36,7 @@
             colDescription = new DataGridViewTextBoxColumn();
             colDateReported = new DataGridViewTextBoxColumn();
             colAttachment = new DataGridViewTextBoxColumn();
+            btnBack = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvReports).BeginInit();
             SuspendLayout();
             // 
@@ -54,6 +55,8 @@
             // 
             dgvReports.AllowUserToAddRows = false;
             dgvReports.AllowUserToDeleteRows = false;
+            dgvReports.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvReports.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvReports.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvReports.Columns.AddRange(new DataGridViewColumn[] { ColID, ColLocation, colCategory, colDescription, colDateReported, colAttachment });
             dgvReports.Location = new Point(0, 63);
@@ -96,6 +99,7 @@
             // colDateReported
             // 
             colDateReported.DataPropertyName = "DateReported";
+            colDateReported.DefaultCellStyle.Format = "dd MMM yyyy HH:mm";
             colDateReported.HeaderText = "Date Reported";
             colDateReported.Name = "colDateReported";
             colDateReported.ReadOnly = true;
@@ -107,14 +111,27 @@
             colAttachment.Name = "colAttachment";
             colAttachment.ReadOnly = true;
             // 
+            // btnBack
+            // 
+            btnBack.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnBack.Font = new Font("Segoe UI", 9.75F);
+            btnBack.Location = new Point(12, 460);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(134, 30);
+            btnBack.TabIndex = 2;
+            btnBack.Text = "Back";
+            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
+            // 
             // SubmittedReportsForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(884, 561);
+            ClientSize = new Size(884, 505);
+            Controls.Add(btnBack);
             Controls.Add(dgvReports);
             Controls.Add(lblTitle);
-            MaximizeBox = false;
+            MinimumSize = new Size(700, 400);
             Name = "SubmittedReportsForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Submitted Reports";
@@ -132,5 +149,6 @@
         private DataGridViewTextBoxColumn colDescription;
         private DataGridViewTextBoxColumn colDateReported;
         private DataGridViewTextBoxColumn colAttachment;
+        private Button btnBack;
     }
 }

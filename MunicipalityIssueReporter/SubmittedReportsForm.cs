@@ -1,4 +1,4 @@
-﻿using MunicipalityIssueReporter.Services;
+using MunicipalityIssueReporter.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,10 +27,6 @@ namespace MunicipalityIssueReporter
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            MainMenuForm mainMenu = new MainMenuForm();
-
-            mainMenu.Show();
-
             this.Close();
         }
 
