@@ -1,11 +1,6 @@
 # Municipality Issue Reporter (Municipality Service Portal)
 
-**Module:** AAPD7112w / PROG7312 – Portfolio of Evidence (Parts 1 & 2)  
-**Student Number:** ST10340689
-
 A C# Windows Forms (`.NET 10`) desktop application that enables South African residents to report municipal service delivery issues (**Part 1**) and browse, search, and receive personalised recommendations for local municipal events and announcements (**Part 2**).
-
----
 
 ## 1. Features
 
