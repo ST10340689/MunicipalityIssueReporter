@@ -1,6 +1,4 @@
 Municipality Service Portal (Municipality Issue Reporter)
-Module: AAPD7112w / PROG7312 – Portfolio of Evidence
-Student Number: ST10340689
 
 ----------------------------------------------------------------------
 1. Overview
