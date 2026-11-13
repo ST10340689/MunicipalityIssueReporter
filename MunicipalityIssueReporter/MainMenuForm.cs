@@ -22,6 +22,11 @@ namespace MunicipalityIssueReporter
             OpenChildForm(new LocalEventsForm());
         }
 
+        private void btnServiceStatus_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ServiceRequestStatusForm());
+        }
+
         /// <summary>
         /// Hides the menu while a page is open and shows it again when that page closes.
         /// This keeps a single menu instance alive, so closing the menu exits the app.

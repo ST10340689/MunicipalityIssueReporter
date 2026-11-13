@@ -1,8 +1,5 @@
-﻿using MunicipalityIssueReporter.Models;
-using System;
+using MunicipalityIssueReporter.Models;
 using System.Collections.Generic;
-using System.Text;
-
 
 namespace MunicipalityIssueReporter.Services
 {
@@ -11,11 +8,11 @@ namespace MunicipalityIssueReporter.Services
         private static readonly List<IssueReport> reportedIssues =
             new List<IssueReport>();
 
-        private static int nextId = 1;
-
         public static void AddReport(IssueReport report)
         {
-            report.Id = nextId++;
+            // Register in Part 3 ServiceRequestService as well so newly reported issues
+            // can be tracked immediately by their unique Reference Number in Service Request Status.
+            ServiceRequestService.RegisterFromIssueReport(report);
             reportedIssues.Add(report);
         }
 

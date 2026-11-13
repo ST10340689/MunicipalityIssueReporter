@@ -71,13 +71,14 @@ namespace MunicipalityIssueReporter
             // btnServiceStatus
             // 
             btnServiceStatus.Anchor = AnchorStyles.Top;
-            btnServiceStatus.Enabled = false;
+            btnServiceStatus.Enabled = true;
             btnServiceStatus.Location = new Point(169, 307);
             btnServiceStatus.Name = "btnServiceStatus";
             btnServiceStatus.Size = new Size(443, 39);
             btnServiceStatus.TabIndex = 5;
             btnServiceStatus.Text = "Service Request Status";
             btnServiceStatus.UseVisualStyleBackColor = true;
+            btnServiceStatus.Click += btnServiceStatus_Click;
             // 
             // MainMenuForm
             // 
